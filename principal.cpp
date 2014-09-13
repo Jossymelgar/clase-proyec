@@ -1,5 +1,6 @@
 #include "principal.h"
 #include <iostream>
+#include <QDebug>
 #include <stdio.h>
 #include <QFile>
 #include <fstream>
@@ -14,9 +15,10 @@
 #include <QMessageBox>
 #include <QDate>
 #include <QTextStream>
+#include<QList>
 #include "llenado.h"
 #include "QList"
-QVector <Carros*> lista;
+QList <Carros*> lista;
 int posicion;
 principal::principal(QWidget *parent) :
     QMainWindow(parent),
@@ -39,13 +41,13 @@ if(ui->placa->text()=="" || ui->marca->text()==""){
   Carros* car = new   Carros(ui->cilin->value(),ui->placa->text(),ui->marca->text(),"fechas");
 
   lista.push_back(car);
-  /*  QFile archivo("/home/jossy/hola mundo.dat");
+   QFile archivo("/home/jossy/proyecto/hola.dat");
     archivo.open(QIODevice::WriteOnly);
     QDataStream out(&archivo);
     out << QString("hola munda");
     out << (qint32)41;
     archivo.close();
-    */
+
    QMessageBox::about(this,"Control de LLenado",ui->placa->text());
 
   ui->placa->setText("");
@@ -94,12 +96,18 @@ if(::posicion>0){
 }
 
 void principal::on_pushButton_7_clicked(){
-    QFile archivo("/home/jossy/hola mundo.dat");
+    /*QFile archivo("/home/jossy/proyecto/hola.dat");
     archivo.open(QIODevice::WriteOnly);
     QDataStream in(&archivo);
     QString str;
     qint32 a;
     in >> str >> a;
+*/
+    QFile archivo("/home/jossy/proyecto/kaka1.dat");
+     archivo.open(QIODevice::WriteOnly);
+     QDataStream out(&archivo);
+     out.writeRawData(reinterpret_cast<char *>(&lista),sizeof(lista));
+     archivo.close();
 }
 
 void principal::on_pushButton_5_clicked()
@@ -207,4 +215,13 @@ void principal::on_pushButton_2_clicked()
     }
 
     ui->detalles_2->setText("");
+}
+
+void principal::on_pushButton_8_clicked(){
+ QFile archivo("/home/jossy/proyecto/kaka1.dat");
+  archivo.open(QIODevice::WriteOnly);
+  QDataStream out(&archivo);
+  out.writeRawData(reinterpret_cast<char *>(&lista),sizeof(lista));
+  archivo.close();
+
 }
