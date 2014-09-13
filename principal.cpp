@@ -104,7 +104,7 @@ void principal::on_pushButton_7_clicked(){
 
 void principal::on_pushButton_5_clicked()
 {
- llenado n (ui->fechag->text(),ui->txtlempira->text().toInt(0,10),ui->txtlitro->text().toInt(0,10),ui->txtkilometro->text().toInt(0,10));
+ llenado n (ui->fechag->text(),ui->splp->value(),ui->splitro->value(),ui->spkilometro->value());
  lista[::posicion]->setLista(n);
  QMessageBox::about(this,"Se Cargo Gasolina al  Carro con placa: ",ui->txtbusca->text());
 

@@ -36,7 +36,7 @@
      <string notr="true">Cargar Gasolina</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -523,26 +523,6 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="txtkilometro">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>220</y>
-        <width>113</width>
-        <height>27</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="txtlitro">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>180</y>
-        <width>113</width>
-        <height>27</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QDateEdit" name="fechag">
       <property name="geometry">
        <rect>
@@ -667,20 +647,38 @@
        <string>Lempiras</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="txtlempira">
+     <widget class="QDoubleSpinBox" name="splp">
       <property name="geometry">
        <rect>
         <x>150</x>
         <y>140</y>
-        <width>113</width>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="splitro">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>180</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="spkilometro">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>220</y>
+        <width>111</width>
         <height>27</height>
        </rect>
       </property>
      </widget>
      <zorder>pushButton_6</zorder>
      <zorder>txtbusca</zorder>
-     <zorder>txtkilometro</zorder>
-     <zorder>txtlitro</zorder>
      <zorder>fechag</zorder>
      <zorder>pushButton_5</zorder>
      <zorder>label_7</zorder>
@@ -690,7 +688,9 @@
      <zorder>label_11</zorder>
      <zorder>listView</zorder>
      <zorder>label_4</zorder>
-     <zorder>txtlempira</zorder>
+     <zorder>splp</zorder>
+     <zorder>splitro</zorder>
+     <zorder>spkilometro</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">

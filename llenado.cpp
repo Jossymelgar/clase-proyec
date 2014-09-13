@@ -12,15 +12,15 @@ QString llenado::getfecha(){
     return fecha;
 }
 
-int llenado::getlempiras(){
+double llenado::getlempiras(){
     return lempiras;
 }
 
-int llenado::getlitros(){
+double llenado::getlitros(){
     return litros;
 }
 
-int llenado::getkilometros(){
+double llenado::getkilometros(){
     return kilometros;
 }
  llenado::llenado(){

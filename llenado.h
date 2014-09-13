@@ -5,16 +5,16 @@
 class llenado
 {
    QString fecha;
-   int lempiras;
-   int litros;
-   int kilometros;
+   double lempiras;
+   double litros;
+   double kilometros;
 public:
     llenado();
     llenado(QString fecha, int lempiras, int litros, int kilometros);
     QString getfecha();
-    int getlempiras();
-    int getlitros();
-    int getkilometros();
+    double getlempiras();
+    double getlitros();
+    double getkilometros();
 };
 
 #endif // LLENADO_H
