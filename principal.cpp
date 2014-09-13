@@ -124,10 +124,10 @@ void principal::on_pushButton_10_clicked()
        }
     }
     if(::posicion>=0){
-      QMessageBox::about(this,"Si existe el Carro con placa: ",ui->busca->text());
+      QMessageBox::about(this,"Control: ","Si existe el carro");
       ui->marca_2->setText(lista[posicion]->getmarca());
       ui->placa_2->setText(lista[posicion]->getplaca());
-      ui->cilindraje_2->setText(QString::number(lista[posicion]->getcilindraje()));
+      ui->spcilin->setValue(lista[posicion]->getcilindraje());
 
 }
 }
@@ -136,8 +136,8 @@ void principal::on_pushButton_9_clicked()
 {
   lista[posicion]->setmarca(ui->marca_2->text());
   lista[posicion]->setplaca(ui->placa_2->text());
-  lista[posicion]->setcilindraje(ui->cilindraje_2->text().toInt(0,10));
-   QMessageBox::about(this,"::Los combios fueron guardados con exito::: ",ui->busca->text());
+  lista[posicion]->setcilindraje(ui->spcilin->value());
+   QMessageBox::about(this,"Control  ","::Los combios fueron guardados con exito:::");
 }
 
 void principal::on_pushButton_13_clicked()
@@ -154,7 +154,7 @@ void principal::on_pushButton_12_clicked()
 {
     lista[posicion]->setmarca(ui->marca_3->text());
     lista[posicion]->setplaca(ui->placa_3->text());
-    lista[posicion]->setcilindraje(ui->cilindraje_3->text().toInt(0,10));
+    lista[posicion]->setcilindraje(ui->spcilin_2->value());
     QMessageBox::about(this,"Comtrol de Cambio","::Los combios fueron guardados con exito:::");
 }
 
@@ -162,10 +162,10 @@ void principal::on_combo_activated(int index)
 {
     ui->marca_3->setText("");
     ui->placa_3->setText("");
-    ui->cilindraje_3->setText("");
+    ui->spcilin_2->setValue(2);
     ui->marca_3->setText(lista[index]->getmarca());
     ui->placa_3->setText(lista[index]->getplaca());
-    ui->cilindraje_3->setText(QString::number(lista[index]->getcilindraje()));
+    ui->spcilin_2->setValue(lista[index]->getcilindraje());
     ::posicion=index;
 
 }
