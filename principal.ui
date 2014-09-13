@@ -36,7 +36,7 @@
      <string notr="true">Cargar Gasolina</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -157,9 +157,187 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Modificar</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>621</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Buscar por placa</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>300</y>
+          <width>99</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cancelar</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="marca_2">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>130</y>
+          <width>113</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="cilindraje_2">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>240</y>
+          <width>113</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>130</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Marca del Carro</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>20</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Abyssinica SIL</family>
+          <pointsize>28</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Modificar Carro</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>250</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cilindraje</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>300</y>
+          <width>99</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>200</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Placa</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="placa_2">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>190</y>
+          <width>113</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_25">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>90</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ingrese placa</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="busca">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>80</y>
+          <width>113</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_10">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>80</y>
+          <width>99</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Buscar</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Busacar por nombre</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Cargar G</string>
+      <string>Cargar Gasolina</string>
      </attribute>
      <widget class="QLineEdit" name="txtbusca">
       <property name="geometry">

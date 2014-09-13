@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2014-08-30T11:32:08
+# Project created by QtCreator 2014-09-13T09:26:55
 #
 #-------------------------------------------------
 
@@ -8,17 +8,19 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = proyecto_original_carro
+TARGET = proyecto
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        principal.cpp \
     carros.cpp \
-    llenado.cpp
+    llenado.cpp \
+    principal.cpp
 
-HEADERS  += principal.h \
+HEADERS  += \
     carros.h \
-    llenado.h
+    llenado.h \
+    principal.h
 
-FORMS    += principal.ui
+FORMS    += \
+    principal.ui

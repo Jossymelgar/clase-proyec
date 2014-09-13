@@ -17,7 +17,7 @@
 #include "llenado.h"
 #include "QList"
 QVector <Carros*> lista;
-int panqueque;
+int posicion;
 principal::principal(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::principal)
@@ -81,11 +81,11 @@ void principal::on_pushButton_6_clicked()
 {
     for(int y=0;y<lista.size();y++){
        if(ui->txtbusca->text()==lista[y]->getplaca()){
-              ::panqueque=y;
+              ::posicion=y;
        }else{
        }
     }
-if(::panqueque>0){
+if(::posicion>0){
     QMessageBox::about(this,"Si existe el Carro con placa: ",ui->txtbusca->text());
 }
 }
@@ -102,7 +102,7 @@ void principal::on_pushButton_7_clicked(){
 void principal::on_pushButton_5_clicked()
 {
  llenado n (ui->fechag->text(),ui->txtlempira->text().toInt(0,10),ui->txtlitro->text().toInt(0,10),ui->txtkilometro->text().toInt(0,10));
- lista[::panqueque]->setLista(n);
+ lista[::posicion]->setLista(n);
  QMessageBox::about(this,"Se Cargo Gasolina al  Carro con placa: ",ui->txtbusca->text());
 
 }
@@ -110,4 +110,21 @@ void principal::on_pushButton_5_clicked()
 void principal::on_pushButton_4_clicked()
 {
     ui->detalles->setText("");
+}
+
+void principal::on_pushButton_10_clicked()
+{
+    for(int y=0;y<lista.size();y++){
+       if(ui->busca->text()==lista[y]->getplaca()){
+              ::posicion=y;
+       }else{
+       }
+    }
+    if(::posicion>=0){
+      QMessageBox::about(this,"Si existe el Carro con placa: ",ui->txtbusca->text());
+      /*ui->marca_2->setText(lista[posicion]->getmarca());
+      ui->placa_2->setText(lista[posicion]->getplaca());
+      ui->cilindraje_2->setText(lista[posicion]->getcilindraje());
+*/
+}
 }
