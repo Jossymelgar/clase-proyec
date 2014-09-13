@@ -34,7 +34,7 @@ principal::~principal()
 void principal::on_pushButton_clicked()
 {
 
-  Carros* car = new   Carros(1,ui->placa->text(),ui->marca->text(),"fechas");
+  Carros* car = new   Carros(ui->cilindraje->text().toInt(0,10),ui->placa->text(),ui->marca->text(),"fechas");
 
   lista.push_back(car);
   /*  QFile archivo("/home/jossy/hola mundo.dat");
@@ -121,10 +121,48 @@ void principal::on_pushButton_10_clicked()
        }
     }
     if(::posicion>=0){
-      QMessageBox::about(this,"Si existe el Carro con placa: ",ui->txtbusca->text());
+      QMessageBox::about(this,"Si existe el Carro con placa: ",ui->busca->text());
       ui->marca_2->setText(lista[posicion]->getmarca());
       ui->placa_2->setText(lista[posicion]->getplaca());
       ui->cilindraje_2->setText(QString::number(lista[posicion]->getcilindraje()));
 
 }
+}
+
+void principal::on_pushButton_9_clicked()
+{
+  lista[posicion]->setmarca(ui->marca_2->text());
+  lista[posicion]->setplaca(ui->placa_2->text());
+  lista[posicion]->setcilindraje(ui->cilindraje_2->text().toInt(0,10));
+   QMessageBox::about(this,"::Los combios fueron guardados con exito::: ",ui->busca->text());
+}
+
+void principal::on_pushButton_13_clicked()
+{
+    ui->combo->clear();
+    for(int i=0; i<lista.size();i++){
+        ui->combo->addItem(lista[i]->getplaca());
+    }
+}
+
+
+
+void principal::on_pushButton_12_clicked()
+{
+    lista[posicion]->setmarca(ui->marca_3->text());
+    lista[posicion]->setplaca(ui->placa_3->text());
+    lista[posicion]->setcilindraje(ui->cilindraje_3->text().toInt(0,10));
+    QMessageBox::about(this,"Comtrol de Cambio","::Los combios fueron guardados con exito:::");
+}
+
+void principal::on_combo_activated(int index)
+{
+    ui->marca_3->setText("");
+    ui->placa_3->setText("");
+    ui->cilindraje_3->setText("");
+    ui->marca_3->setText(lista[index]->getmarca());
+    ui->placa_3->setText(lista[index]->getplaca());
+    ui->cilindraje_3->setText(QString::number(lista[index]->getcilindraje()));
+    ::posicion=index;
+
 }

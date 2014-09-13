@@ -30,6 +30,16 @@ private slots:
 
     void on_pushButton_10_clicked();
 
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_13_clicked();
+
+
+
+    void on_combo_activated(int index);
+
+    void on_pushButton_12_clicked();
+
 private:
     Ui::principal *ui;
 };
