@@ -33,8 +33,10 @@ principal::~principal()
 
 void principal::on_pushButton_clicked()
 {
-
-  Carros* car = new   Carros(ui->cilindraje->text().toInt(0,10),ui->placa->text(),ui->marca->text(),"fechas");
+if(ui->placa->text()=="" || ui->marca->text()==""){
+    QMessageBox::about(this,"Control de Seguridad","No debe dejar atributos vacios");
+}else{
+  Carros* car = new   Carros(ui->cilin->value(),ui->placa->text(),ui->marca->text(),"fechas");
 
   lista.push_back(car);
   /*  QFile archivo("/home/jossy/hola mundo.dat");
@@ -47,6 +49,7 @@ void principal::on_pushButton_clicked()
    QMessageBox::about(this,"Control de LLenado",ui->placa->text());
 
   ui->placa->setText("");
+}
 }
 void principal::on_pushButton_3_clicked(){
     double k=0,l=0,lp=0;
@@ -165,4 +168,43 @@ void principal::on_combo_activated(int index)
     ui->cilindraje_3->setText(QString::number(lista[index]->getcilindraje()));
     ::posicion=index;
 
+}
+
+void principal::on_pushButton_14_clicked()
+{
+    ui->combo_2->clear();
+    for(int i=0; i<lista.size();i++){
+        ui->combo_2->addItem(lista[i]->getplaca());
+    }
+}
+
+void principal::on_combo_2_activated(int index)
+{
+    ui->detalles_2->setText("");
+    ui->detalles_2->append(lista[index]->toString());
+    ::posicion=index;
+}
+
+void principal::on_combo_2_activated(const QString &arg1)
+{
+
+}
+
+void principal::on_pushButton_2_clicked()
+{
+    QMessageBox::StandardButton mensaje;
+    mensaje = QMessageBox::question(this, "Control de eliminacion", "Seguro de Eliminar",
+                                  QMessageBox::Yes|QMessageBox::No);
+    if (mensaje == QMessageBox::Yes) {
+       lista.erase(lista.begin()+::posicion);
+       QMessageBox::about(this,"Control de Eliminacion","Fue eliminado");
+       ui->combo_2->clear();
+       for(int i=0; i<lista.size();i++){
+           ui->combo_2->addItem(lista[i]->getplaca());
+       }
+    } else {
+      QMessageBox::about(this,"Control de Eliminacion","Proceso Cancelado");
+    }
+
+    ui->detalles_2->setText("");
 }

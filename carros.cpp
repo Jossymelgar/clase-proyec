@@ -44,3 +44,7 @@ QString Carros::getfecha(){
  QVector<llenado> Carros::getLista(){
   return lista;
  }
+QString Carros::toString()const{
+        QString salida ="Marca: "+this->marca+" Placa: "+this->placa+" Cilindraje: "+QString::number(cilindraje);
+    return salida;
+}

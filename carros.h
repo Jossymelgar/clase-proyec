@@ -25,6 +25,7 @@ public:
     QString getmarca();
     void setLista(llenado& obj);
     QVector<llenado> getLista();
+    QString toString()const;
 
 };
 

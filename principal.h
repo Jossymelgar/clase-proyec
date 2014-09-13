@@ -40,6 +40,14 @@ private slots:
 
     void on_pushButton_12_clicked();
 
+    void on_pushButton_14_clicked();
+
+    void on_combo_2_activated(int index);
+
+    void on_combo_2_activated(const QString &arg1);
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::principal *ui;
 };

@@ -36,7 +36,7 @@
      <string notr="true">Cargar Gasolina</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -101,16 +101,6 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="cilindraje">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>220</y>
-        <width>113</width>
-        <height>27</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
@@ -129,6 +119,69 @@
        <rect>
         <x>170</x>
         <y>16</y>
+        <width>361</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Abyssinica SIL</family>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Control de Creacion</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="cilin">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>230</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>2</number>
+      </property>
+      <property name="maximum">
+       <number>12</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Eliminar">
+     <attribute name="title">
+      <string>Eliminar</string>
+     </attribute>
+     <widget class="QComboBox" name="combo_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>70</y>
+        <width>271</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>100</y>
+        <width>141</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Atualizar Datos</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>30</y>
         <width>321</width>
         <height>31</height>
        </rect>
@@ -140,7 +193,30 @@
        </font>
       </property>
       <property name="text">
-       <string>Cotrol deCreacion</string>
+       <string>Modificar Carro</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>230</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Eliminar</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="detalles_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>621</width>
+        <height>61</height>
+       </rect>
       </property>
      </widget>
     </widget>
