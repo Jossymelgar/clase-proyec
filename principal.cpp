@@ -122,9 +122,9 @@ void principal::on_pushButton_10_clicked()
     }
     if(::posicion>=0){
       QMessageBox::about(this,"Si existe el Carro con placa: ",ui->txtbusca->text());
-      /*ui->marca_2->setText(lista[posicion]->getmarca());
+      ui->marca_2->setText(lista[posicion]->getmarca());
       ui->placa_2->setText(lista[posicion]->getplaca());
-      ui->cilindraje_2->setText(lista[posicion]->getcilindraje());
-*/
+      ui->cilindraje_2->setText(QString::number(lista[posicion]->getcilindraje()));
+
 }
 }
