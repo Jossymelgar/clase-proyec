@@ -18,7 +18,7 @@
 #include<QList>
 #include "llenado.h"
 #include "QList"
-QList <Carros*> lista;
+QVector <Carros*> lista;
 int posicion;
 principal::principal(QWidget *parent) :
     QMainWindow(parent),
@@ -90,7 +90,7 @@ void principal::on_pushButton_6_clicked()
        }else{
        }
     }
-if(::posicion>0){
+if(::posicion>=0){
     QMessageBox::about(this,"Si existe el Carro con placa: ",ui->txtbusca->text());
 }
 }
