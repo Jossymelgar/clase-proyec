@@ -50,6 +50,8 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_pushButton_11_clicked();
+
 private:
     Ui::principal *ui;
 };

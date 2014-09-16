@@ -26,3 +26,7 @@ double llenado::getkilometros(){
  llenado::llenado(){
 
  }
+  QString llenado::toString(){
+      QString ss = ":"+getfecha()+","+QString::number(getlempiras())+","+QString::number(getlitros())+","+QString::number(getkilometros());
+      return ss;
+  }

@@ -20,7 +20,7 @@
       <x>10</x>
       <y>0</y>
       <width>641</width>
-      <height>501</height>
+      <height>531</height>
      </rect>
     </property>
     <property name="toolTip">
@@ -36,7 +36,7 @@
      <string notr="true">Cargar Gasolina</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -435,6 +435,12 @@
           <height>27</height>
          </rect>
         </property>
+        <property name="minimum">
+         <number>2</number>
+        </property>
+        <property name="maximum">
+         <number>12</number>
+        </property>
        </widget>
       </widget>
      </widget>
@@ -482,7 +488,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Modificar Carro</string>
+       <string>Eliminar Carro</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_2">
@@ -511,7 +517,7 @@
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Cargar Gasolina</string>
+      <string>Cargar Combustible</string>
      </attribute>
      <widget class="QLineEdit" name="txtbusca">
       <property name="geometry">
@@ -723,7 +729,7 @@
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>240</x>
         <y>250</y>
         <width>99</width>
         <height>27</height>
@@ -776,7 +782,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Total Litoros</string>
+       <string>Total Litros</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_14">
@@ -844,39 +850,48 @@
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>410</y>
+        <y>440</y>
         <width>81</width>
         <height>17</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Kilometros / Litros</string>
+      </property>
       <property name="text">
-       <string>% kil/Lit</string>
+       <string> kil/Lit</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
         <x>330</x>
-        <y>360</y>
+        <y>390</y>
         <width>91</width>
         <height>17</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Lempiras / Kilometros</string>
+      </property>
       <property name="text">
-       <string>% lp/kil</string>
+       <string> lp/kil</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
         <x>470</x>
-        <y>360</y>
+        <y>390</y>
         <width>81</width>
         <height>17</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Lempiras / Dias</string>
+      </property>
       <property name="text">
-       <string>% Lp/Dia</string>
+       <string> Lp/Dia</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="porl">
@@ -886,7 +901,7 @@
       <property name="geometry">
        <rect>
         <x>320</x>
-        <y>430</y>
+        <y>460</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -899,7 +914,7 @@
       <property name="geometry">
        <rect>
         <x>320</x>
-        <y>380</y>
+        <y>410</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -912,7 +927,7 @@
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>380</y>
+        <y>410</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -922,13 +937,16 @@
       <property name="geometry">
        <rect>
         <x>470</x>
-        <y>410</y>
+        <y>440</y>
         <width>67</width>
         <height>17</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Kilometros / Galon</string>
+      </property>
       <property name="text">
-       <string>% Lp/Ga</string>
+       <string> Kil/Ga</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="galon">
@@ -938,7 +956,7 @@
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>430</y>
+        <y>460</y>
         <width>113</width>
         <height>27</height>
        </rect>
@@ -948,7 +966,7 @@
       <property name="geometry">
        <rect>
         <x>360</x>
-        <y>320</y>
+        <y>280</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -963,20 +981,36 @@
        </font>
       </property>
       <property name="text">
-       <string>Porcentajes</string>
+       <string>Promedios</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>250</y>
-        <width>99</width>
-        <height>27</height>
+        <x>400</x>
+        <y>320</y>
+        <width>67</width>
+        <height>17</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Kilometro / Dias</string>
+      </property>
       <property name="text">
-       <string>Guardar</string>
+       <string>Kil/Dia</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="kd">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>350</y>
+        <width>113</width>
+        <height>27</height>
+       </rect>
       </property>
      </widget>
     </widget>

@@ -15,6 +15,7 @@ public:
     double getlempiras();
     double getlitros();
     double getkilometros();
+    QString toString();
 };
 
 #endif // LLENADO_H
