@@ -128,7 +128,7 @@ void principal::on_pushButton_3_clicked(){
      for(int y=0;y<lista.size();y++){
         if(ui->txtbuscart->text()==lista[y]->getplaca()){
            QString cadena;
-           cadena="Marca:  "+lista[y]->getmarca()+" Placa:  "+lista[y]->getplaca()+" Cilindraje:   "+QString::number(lista[y]->getcilindraje())+" Fecha"+lista[y]->getfecha();
+           cadena="Marca:  "+lista[y]->getmarca()+" Placa:  "+lista[y]->getplaca()+" Cilindraje:   "+QString::number(lista[y]->getcilindraje());
            ui->textEdit->append(cadena);
            int tamano =lista[y]->getLista().length();
            posi=y;
@@ -164,8 +164,8 @@ void principal::on_pushButton_3_clicked(){
 }
 void principal::on_pushButton_6_clicked()
 {
-    bool entro=false;
- if(ui->txtbusca->text()==""){
+ bool entro=false;
+ if(ui->txtbusca->text()=="" || ui->txtbusca->text()==" "){
     QMessageBox::about(this,"Control ","Ingrese la placa porfavor");
  }else{
     for(int y=0;y<lista.size();y++){
@@ -177,8 +177,9 @@ void principal::on_pushButton_6_clicked()
     }
    if(entro==true){
         QMessageBox::about(this,"Control ","Si Existe Vehiculo con placa: "+ui->txtbusca->text());
+       ui->pushButton_5->setEnabled(true);
 }else{
-        QMessageBox::about(this,"Control ","N Existe Vehiculo con placa: "+ui->txtbusca->text());
+        QMessageBox::about(this,"Control ","N0 Existe Vehiculo con placa: "+ui->txtbusca->text());
    }
 }
 }
@@ -250,6 +251,7 @@ void principal::on_pushButton_5_clicked()
 
   }
   escribir1 << subtxt <<endl;
+  ui->pushButton_5->setEnabled(false);
 
 }
 
